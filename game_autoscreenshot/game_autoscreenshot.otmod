@@ -1,0 +1,14 @@
+Module
+  name: game_autoscreenshot
+  description: Auto make screenshot.
+  author: EgzoT
+  website: ---
+  version: 0.9
+
+  autoload: true
+  autoload-priority: 1000
+  sandboxed: true
+  dependencies: [ game_interface ]
+  scripts: [ game_autoscreenshot ]
+  @onLoad: init()
+  @onUnload: terminate()

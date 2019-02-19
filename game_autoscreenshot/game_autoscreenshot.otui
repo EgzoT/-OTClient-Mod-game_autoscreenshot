@@ -1,0 +1,113 @@
+MainWindow
+  id: autoscreenshotMain
+  !text: tr('Auto screenshot')
+  size: 300 500
+  @onEscape: modules.game_autoscreenshot.toggle()
+
+  CheckBox
+    id: levelScreenshotCheckBox
+    text: Level
+    phantom: false
+    !tooltip: tr('Make screenshot when level up.')
+    anchors.left: parent.left
+    anchors.top: parent.top
+    width: 180
+    margin-top: 8
+
+  CheckBox
+    id: magicScreenshotCheckBox
+    text: Magic Level
+    phantom: false
+    !tooltip: tr('Make screenshot when magic level up.')
+    anchors.left: parent.left
+    anchors.top: levelScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: fistScreenshotCheckBox
+    text: Fist Fighting
+    phantom: false
+    !tooltip: tr('Make screenshot when fist fighting up.')
+    anchors.left: parent.left
+    anchors.top: magicScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: clubScreenshotCheckBox
+    text: Club Fighting
+    phantom: false
+    !tooltip: tr('Make screenshot when club fighting up.')
+    anchors.left: parent.left
+    anchors.top: fistScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: swordScreenshotCheckBox
+    text: Sword Fighting
+    phantom: false
+    !tooltip: tr('Make screenshot when sword fighting up.')
+    anchors.left: parent.left
+    anchors.top: clubScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: axeScreenshotCheckBox
+    text: Axe Fighting
+    phantom: false
+    !tooltip: tr('Make screenshot when axe fighting up.')
+    anchors.left: parent.left
+    anchors.top: swordScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: distanceScreenshotCheckBox
+    text: Distance Fighting
+    phantom: false
+    !tooltip: tr('Make screenshot when distance fighting up.')
+    anchors.left: parent.left
+    anchors.top: axeScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: shieldingScreenshotCheckBox
+    text: Shielding
+    phantom: false
+    !tooltip: tr('Make screenshot when shielding up.')
+    anchors.left: parent.left
+    anchors.top: distanceScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: fishingScreenshotCheckBox
+    text: Fishing
+    phantom: false
+    !tooltip: tr('Make screenshot when fishing up.')
+    anchors.left: parent.left
+    anchors.top: shieldingScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  CheckBox
+    id: onDeathScreenshotCheckBox
+    text: When character dead
+    phantom: false
+    !tooltip: tr('Make screenshot when character dead.')
+    anchors.left: parent.left
+    anchors.top: fishingScreenshotCheckBox.bottom
+    width: 180
+    margin-top: 5
+
+  Button
+    id: closeButton
+    !text: tr('Close')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_autoscreenshot.toggle()
