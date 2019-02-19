@@ -1,0 +1,1 @@
+# -OTClient-Mod-game_autoscreenshot
